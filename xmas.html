@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+  <title>🎅당신에게 도착한 편지</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Do Hyeon', sans-serif;
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
+
+    body {
+      background-color: #9b070f;
+    }
+
+    .letter-open, .hidden {
+      display: none;
+    }
+
+    .envelope {
+      background-image: url("https://pngimg.com/uploads/envelope/envelope_PNG18366.png");
+      background-size: cover;
+      background-position: center;
+      width: 200px;
+      height: 200px;
+      margin: 200px auto 0 auto;
+      cursor: pointer;
+    }
+
+    .msg {
+      color: white;
+      text-align: center;
+    }
+
+    .rtan, .hidden_img {
+      background-color: white;
+      width: 200px;
+      height: 200px;
+      background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/Webp.net-gifmaker+(2).gif");
+      background-position: center;
+      background-size: cover;
+      margin: 100px auto 0 auto;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0px 0px 10px 0px white;
+      cursor: pointer;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      margin: 30px 0 30px 0;
+    }
+
+    .msgBox {
+      background-color: ivory;
+      width: 400px;
+      margin: auto;
+      color: brown;
+      padding: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      box-shadow: 0px 0px 10px 0px white;
+    }
+
+    .from {
+      text-align: right;
+      margin-bottom: 0;
+    }
+    
+    .hidden .msgBox {
+      margin-top: 20px;
+    }
+
+    .hidden_img {
+      background-image: url('img/트리.jpg');
+    }
+
+    @media screen and (max-width: 760px) {
+      .envelope {
+        margin: 150px auto 0 auto;
+      }
+
+      .msgBox {
+        width: 300px;
+        padding: 20px;
+      }
+
+      .rtan {
+        width: 150px;
+        height: 150px;
+        margin: 70px auto 0px auto;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+
+  <script>
+    function open_letter() {
+      document.getElementsByClassName("letter")[0].style.display = 'none';
+      document.getElementsByClassName("letter-open")[0].style.display = 'block';
+    }
+    function hidden_msg() {
+      alert('아직 내 얘기는 끝나지 않았어!');
+      document.getElementsByClassName("hidden")[0].style.display = 'block';
+      document.getElementsByClassName("letter-open")[0].style.display = 'none';
+    }
+  </script>
+</head>
+
+<body>
+  <div class="letter">
+    <div class="envelope" onclick = "open_letter()""></div>
+    <h2 class="msg">내 마음이 담긴 봉투야!👆</h2>
+  </div>
+  <div class="letter-open">
+    <div class="rtan" onclick="hidden_msg()"></div>
+    <h1>🤍미리 메리 크리스마스🤍</h1>
+    <div class="msgBox">
+      친구들에게. <br />
+      올해 이런저런 일이 많았는데 <br />
+      너희 덕분에 하나도 힘들지 않았어 <br />
+      내년에도 우리 우정 변치말자 <br />
+      연말에 다 같이 못 봐서 아쉽다 <br />
+      <p class="from">2020.11.26 다오니가</p>
+    </div>
+  </div>
+  <div class="hidden" onclick="hidden_msg()">
+    <div class="hidden_img"></div>
+    <h1>내 진심은,,</h1>
+    <div class="msgBox">
+      언제나 우리 행복하게 사이좋게 지내자 <br />
+      내가 더 잘할게 <br />
+      웃을 일이, 행복한 일이 더 많기를 <br />
+      사랑하는 내 마음을 가득 담아 <br />
+    </div>
+  </div>
+
+</body>
+
+</html>
